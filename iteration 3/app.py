@@ -206,21 +206,6 @@ def mark_valid(widget):
     except Exception:
         pass
 
-def luhn_check(card_number: str):
-    s = re.sub(r"\D", "", card_number)
-    if not s:
-        return False
-    total = 0
-    rev = s[::-1]
-    for i, ch in enumerate(rev):
-        d = int(ch)
-        if i % 2 == 1:
-            d *= 2
-            if d > 9:
-                d -= 9
-        total += d
-    return total % 10 == 0
-
 # Main App 
 class App(tk.Tk):
     def __init__(self):
