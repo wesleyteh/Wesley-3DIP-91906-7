@@ -7,7 +7,7 @@
 #   - Users can browse and buy food
 #   - Data saved/loaded from JSON file
 # Updates:
-#   - Major UI revamp: food boxes, icons, colours, fun fact of the day, money saved, profile stats
+#   - Major UI revamp: food boxes, icons, colours, fun facts, money saved, profile stats
 #   - Security questions for password recovery
 ##############################################################
 
@@ -362,7 +362,7 @@ class App(tk.Tk):
         for w in f.winfo_children():
             w.destroy()
 
-        # Fun Fact of the Day
+        # Fun Facts
         fun_facts = [
             "Did you know? 1/3 of all food produced is wasted.",
             "Bananas are berries, but strawberries aren't!",
